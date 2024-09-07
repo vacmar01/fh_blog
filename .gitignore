@@ -1,0 +1,8 @@
+tailwindcss
+src/
+tailwind.config.js
+__pycache__
+*.pyc
+.venv/
+.DS_Store
+.sesskey
