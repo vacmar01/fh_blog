@@ -13,9 +13,8 @@ frankenui = Link(rel='stylesheet', href='https://unpkg.com/franken-wc@0.1.0/dist
 tailwind = Link(rel="stylesheet", href="/public/app.css", type="text/css")
 
 og_headers = (
-    Meta(property="og:title", content="Marius Vach Blog"),
-    Meta(property="og:description", content="Radiologist and software developer. I love building software and learning new things."),
-    Meta(property="og:image", content="https://blog.mariusvach.com/public/og.png"),
+    Meta(property="og:image", content="https://blog.mariusvach.com/public/images/og.png"),
+    Meta(property="twitter:image", content="https://blog.mariusvach.com/public/images/og.png"),
 )
 
 app, rt = fast_app(pico=False, hdrs=(frankenui, tailwind, plausible, *og_headers, MarkdownJS(), HighlightJS(langs=['python', 'bash', 'yaml', 'json'], light="atom-one-dark")), static_dir='public')
