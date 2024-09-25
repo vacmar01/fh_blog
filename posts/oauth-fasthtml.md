@@ -102,7 +102,7 @@ tailwind = Script(defer=True, src='https://cdn.tailwindcss.com')
 client = GitHubAppClient(os.getenv("GITHUB_CLIENT_ID"), 
                          os.getenv("GITHUB_CLIENT_SECRET"),
                          scope="user:email",
-                         redirect_url="http://0.0.0.0:5001/auth_redirect/github")
+                         redirect_url="http://127.0.0.1:5001/auth_redirect/github")
 
 login_redir = RedirectResponse('/login', status_code=303)
 
