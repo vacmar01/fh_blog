@@ -12,7 +12,13 @@ plausible = Script(defer=True, data_domain='blog.mariusvach.com', src='https://p
 frankenui = Link(rel='stylesheet', href='https://unpkg.com/franken-wc@0.1.0/dist/css/zinc.min.css'), Script(src='https://cdn.jsdelivr.net/npm/uikit@3.21.6/dist/js/uikit.min.js'),Script(src='https://cdn.jsdelivr.net/npm/uikit@3.21.6/dist/js/uikit-icons.min.js')
 tailwind = Link(rel="stylesheet", href="/public/app.css", type="text/css")
 
-app, rt = fast_app(pico=False, hdrs=(frankenui, tailwind, plausible, MarkdownJS(), HighlightJS(langs=['python', 'bash', 'yaml', 'json'], light="atom-one-dark")), static_dir='public')
+og_headers = (
+    Meta(property="og:title", content="Marius Vach Blog"),
+    Meta(property="og:description", content="Radiologist and software developer. I love building software and learning new things."),
+    Meta(property="og:image", content="https://blog.mariusvach.com/public/og.png"),
+)
+
+app, rt = fast_app(pico=False, hdrs=(frankenui, tailwind, plausible, *og_headers, MarkdownJS(), HighlightJS(langs=['python', 'bash', 'yaml', 'json'], light="atom-one-dark")), static_dir='public')
 
 @rt('/')
 def get():
@@ -40,7 +46,8 @@ def get():
                     if 'date' in post and isinstance(post['date'], str):
                         post['date'] = datetime.strptime(post['date'], "%Y-%m-%d")
                     
-                    posts.append(post)
+                    if not post["draft"]:
+                        posts.append(post)
 
     # Sort posts by date, most recent first
     posts.sort(key=lambda x: x.get('date', datetime.min), reverse=True)
@@ -64,9 +71,11 @@ def get():
     return Title('Marius Vach Blog'), Div(
         H1("Hey, I'm Marius!", cls="text-4xl font-bold font-heading tracking-tight uk-margin-small-bottom"),
         P("I'm a radiologist and software developer. I love building software and learning new things.", cls="text-lg uk-text-muted"),
-        A(Lucide('mail', cls="w-4 h-4 mr-2"), "Email me", href="mailto:mariusvach@gmail.com", cls="uk-button uk-button-primary uk-margin-small-top"),
-        A(Lucide('github', cls="w-4 h-4 mr-2 text-white"), "GitHub", href="https://github.com/vacmar01/fh_blog", cls="uk-button uk-button-primary uk-margin-small-top"),
-        A(Lucide('twitter', cls="w-4 h-4 mr-2 text-white"), "Twitter", href="https://twitter.com/rasmus1610", cls="uk-button uk-button-primary uk-margin-small-top"),
+        Div()(
+            A(Lucide('mail', cls="w-4 h-4 mr-2"), "Email me", href="mailto:mariusvach@gmail.com", cls="uk-button uk-button-primary uk-margin-small-top uk-margin-small-right"),
+            A(Lucide('github', cls="w-4 h-4 mr-2 text-white"), "GitHub", href="https://github.com/vacmar01/fh_blog", cls="uk-button uk-button-primary  uk-margin-small-right uk-margin-small-top"),
+            A(Lucide('twitter', cls="w-4 h-4 mr-2 text-white"), "Twitter", href="https://twitter.com/rasmus1610", cls="uk-button uk-button-primary uk-margin-small-top")
+        ),
         H2("Here are some things I wrote:", cls="text-3xl font-bold font-heading tracking-tight uk-margin-large-top"),
         Div(
             *[BlogCard(post) for post in posts], 
