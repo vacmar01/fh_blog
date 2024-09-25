@@ -1,5 +1,5 @@
 ---
-title: How to implement social logins using OAuth and FastHTML
+title: How to Implement Social Login using OAuth and FastHTML
 date: 2024-09-25T11:20:06+01:00
 draft: false
 excerpt: Let's implement social logins in FastHTML
