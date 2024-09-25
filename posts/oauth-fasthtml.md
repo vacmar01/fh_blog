@@ -55,8 +55,8 @@ These are the steps for Github:
 * Click on OAuth apps on the left
 * Create a new OAuth app
     * give it any name you want, I named mine *“oauth-example”*
-    * The homepage url can be your local url, something like “http://0.0.0.0:5001”
-    * the authorization callback url is the endpoint that is being called with the authentication code and will be implemented by us. I named mine “http://0.0.0.0:5001/auth_redirect/github”. 
+    * The homepage url can be your localhost, something like “http://127.0.0.1:5001”
+    * the authorization callback url is the endpoint that is being called with the authentication code and will be implemented by us. I named mine “http://127.0.0.1:5001/auth_redirect/github”. 
 * Save it. 
 
 You should see a `CLIENT_ID`. Click to create a client secret and copy it. 
