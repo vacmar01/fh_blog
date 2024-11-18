@@ -11,6 +11,7 @@ You can find the other parts of this series here:
 
 - Part 1: Classic password-based login
 - [Part 2: Passwordless Authentication](/posts/passwordless-auth-fasthtml)
+- [Part 3: OAuth authentication](/posts/oauth-fasthtml)
 
 __________
 

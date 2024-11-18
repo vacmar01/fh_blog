@@ -9,7 +9,7 @@ This is part 3 of a series of posts on how to build a simple user management sys
 
 You can find the other parts of this series here:
 
-- [Part 1: Classic password-based login](/posts/login-fasthtml.md)
+- [Part 1: Classic password-based login](/posts/login-fasthtml)
 - [Part 2: Passwordless Authentication](/posts/passwordless-auth-fasthtml)
 - Part 3: Social Logins using OAuth (*you are here*)
 
