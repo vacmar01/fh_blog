@@ -17,7 +17,7 @@ og_headers = (
     Meta(property="twitter:image", content="https://blog.mariusvach.com/public/images/og.png"),
 )
 
-app, rt = fast_app(pico=False, hdrs=(frankenui, tailwind, plausible, *og_headers, MarkdownJS(), HighlightJS(langs=['python', 'bash', 'yaml', 'json'], light="atom-one-dark")), static_dir='public')
+app, rt = fast_app(pico=False, static_path='public', hdrs=(frankenui, tailwind, plausible, *og_headers, MarkdownJS(), HighlightJS(langs=['python', 'bash', 'yaml', 'json'], light="atom-one-dark")))
 
 @rt('/')
 def get():
