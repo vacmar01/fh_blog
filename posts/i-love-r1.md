@@ -3,6 +3,7 @@ title: I love you, R1
 date: 2025-01-31T11:20:06+01:00
 draft: false
 excerpt: Why I think reasoning models are a huge step forward...
+image: r1.png
 ---
 
 When using AI to help me with tedious research tasks, I have to trust it and be able to verify its output, because in the end, it's my name on the paper and my reputation on the line. 

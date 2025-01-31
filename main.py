@@ -13,8 +13,7 @@ frankenui = Link(rel='stylesheet', href='https://unpkg.com/franken-wc@0.1.0/dist
 tailwind = Link(rel="stylesheet", href="/public/app.css", type="text/css")
 
 og_headers = (
-    Meta(property="og:image", content="https://blog.mariusvach.com/public/images/og.png"),
-    Meta(property="twitter:image", content="https://blog.mariusvach.com/public/images/og.png"),
+    Meta(property="og:image", content="https://blog.mariusvach.com/images/og.png"),
 )
 
 app, rt = fast_app(pico=False, static_path='public', hdrs=(frankenui, tailwind, plausible, *og_headers, MarkdownJS(), HighlightJS(langs=['python', 'bash', 'yaml', 'json'], light="atom-one-dark")))
@@ -92,7 +91,14 @@ def get(slug: str):
     
     frontmatter = yaml.safe_load(content.split('---')[1])
     
-    return Title(f"{frontmatter['title']} - Marius Vach Blog"), Div(
+    twitter_headers = (
+        Meta(name='twitter:card', content='summary'),
+        Meta(name='twitter:title', content=frontmatter['title']),
+        Meta(name='twitter:description', content=frontmatter['excerpt'] or "Blog by Marius Vach"),
+        Meta(name='twitter:image', content=f"https://blog.mariusvach.com/images/{frontmatter["image"]}" if 'image' in frontmatter else 'https://blog.mariusvach.com/images/og.png')
+    )
+    
+    return *twitter_headers, Title(f"{frontmatter['title']} - Marius Vach Blog"), Div(
         A(Lucide('arrow-left', cls="w-4 h-4 text-black mr-2"), 'Go Back', href='/', cls="absolute md:top-0 left-0 top-2 md:-ml-48 md:mt-16 uk-button uk-button-ghost"),
         H1(frontmatter["title"], cls="text-4xl font-bold font-heading tracking-tight uk-margin-small-bottom"),
         P(frontmatter['date'].strftime("%B %d, %Y"), " by Marius Vach", cls="uk-text-muted uk-text-small uk-text-italic"),
