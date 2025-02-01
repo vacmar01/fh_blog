@@ -69,10 +69,11 @@ def get():
     return Title('Marius Vach Blog'), Div(
         H1("Hey, I'm Marius!", cls="text-4xl font-bold font-heading tracking-tight uk-margin-small-bottom"),
         P("I'm a radiologist and software developer. I love building software and learning new things.", cls="text-lg uk-text-muted"),
-        Div()(
+        Div(
             A(Lucide('mail', cls="w-4 h-4 mr-2"), "Email me", href="mailto:mariusvach@gmail.com", cls="uk-button uk-button-primary uk-margin-small-top uk-margin-small-right"),
             A(Lucide('github', cls="w-4 h-4 mr-2 text-white"), "GitHub", href="https://github.com/vacmar01/fh_blog", cls="uk-button uk-button-primary  uk-margin-small-right uk-margin-small-top"),
-            A(Lucide('twitter', cls="w-4 h-4 mr-2 text-white"), "Twitter", href="https://twitter.com/rasmus1610", cls="uk-button uk-button-primary uk-margin-small-top")
+            A(Lucide('twitter', cls="w-4 h-4 mr-2 text-white"), "Twitter", href="https://twitter.com/rasmus1610", cls="uk-button uk-button-primary uk-margin-small-top uk-margin-small-right"),
+            A(Lucide("smile", cls="w-4 h-4 mr-2 text-white"), "Bluesky", href="https://bsky.app/profile/rasmus1610.bsky.social", cls="uk-button uk-button-primary uk-margin-small-top"),
         ),
         H2("Here are some things I wrote:", cls="text-3xl font-bold font-heading tracking-tight uk-margin-large-top"),
         Div(
