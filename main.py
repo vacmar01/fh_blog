@@ -10,7 +10,7 @@ import os
 
 plausible = Script(defer=True, data_domain='blog.mariusvach.com', src='https://plausible.io/js/script.js')
 frankenui = Link(rel='stylesheet', href='https://unpkg.com/franken-wc@0.1.0/dist/css/zinc.min.css'), Script(src='https://cdn.jsdelivr.net/npm/uikit@3.21.6/dist/js/uikit.min.js'),Script(src='https://cdn.jsdelivr.net/npm/uikit@3.21.6/dist/js/uikit-icons.min.js')
-tailwind = Link(rel="stylesheet", href="/public/app.css", type="text/css")
+tailwind = Link(rel="stylesheet", href="/app.css", type="text/css")
 
 og_headers = (
     Meta(property="og:image", content="https://blog.mariusvach.com/images/og.png"),

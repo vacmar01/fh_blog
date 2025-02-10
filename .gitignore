@@ -4,5 +4,7 @@ tailwind.config.js
 __pycache__
 *.pyc
 .venv/
+.env
+/data/
 .DS_Store
 .sesskey
