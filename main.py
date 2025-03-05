@@ -34,6 +34,7 @@ app, rt = fast_app(
         frankenui,
         tailwind,
         plausible,
+        Meta(name='google-site-verification', content='AHzT8BdRGuJ20gfBTqIHtWBGoleIfJ0e9gfjWwA_7HA'),
         *og_headers,
         MarkdownJS(),
         HighlightJS(langs=["python", "bash", "yaml", "json"], light="atom-one-dark"),
