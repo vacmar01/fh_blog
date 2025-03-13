@@ -2,7 +2,7 @@
 title: "The Best of Both Worlds: Combining Query Rewriting with Keyword-Based Search"
 date: 2025-03-13T15:27:52+01:00
 draft: false
-excerpt: How to use decorators to elegantly define layouts in FastHTML
+excerpt: How to make BM25-based search more robust...
 ---
 
 Keyword-based search, like BM25, remains a strong baseline for retrieval in many RAG applications. Especially if you deal with jargon-heavy text, like in medicine, a keyword-based search approach is very powerful. 
