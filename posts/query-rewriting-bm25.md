@@ -28,7 +28,7 @@ It turns out we can use this method to let a LLM rewrite the user query and call
 def retrieve_chunks(
         query: str # the search query to retrieve the most relevant parts using BM25 retrieval.
     ) -> str: # Returns the most relevant parts of the database
-    "Uses semantic search to retrieve content from your database."
+    "Uses keyword-based search to retrieve content from your database."
 
     retriever = BM25Retriever.from_defaults(
         nodes=nodes,
@@ -48,7 +48,7 @@ print(client.structured("Wahts the maening of live?", retrieve_chunks))
 This all it takes. As you can see claudette uses a very elegant way of documenting its tools called "docments", which are basically inline comments behind the function arguments and return values as well as a normal document string inside of the function body. Behind the scenes, claudette generates a full function schema from it, which allows structured responses from the LLM: 
 ```
 {'name': 'retrieve_chunks',
- 'description': 'Uses semantic search to retrieve content from your database.\n\nReturns:\n- type: string',
+ 'description': 'Uses keyword-based search to retrieve content from your database.\n\nReturns:\n- type: string',
  'input_schema': {'type': 'object',
   'properties': {'query': {'type': 'string',
     'description': 'the search query to retrieve the most relevant parts using BM25 retrieval.'}},
@@ -56,6 +56,6 @@ This all it takes. As you can see claudette uses a very elegant way of documenti
   'required': ['query']}}
 ```
 
-The last line of code returns the result of `retrieve_chunks` after calling it with an LLM-generated query.
+The last line of code returns the result of `retrieve_chunks` after calling it with an LLM-generated query. In my case Sonnet rewrote the the query to "meaning of life" (seems reasonable).
 
 That's it. That's literally all you need to improve your BM25-based search engine with LLM-based query rewriting. This approach mitigates many of BM25’s shortcomings, making your system more robust while preserving its strong performance 🚀.
