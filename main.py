@@ -23,9 +23,9 @@ frankenui = (
 )
 tailwind = Link(rel="stylesheet", href="/app.css", type="text/css")
 
-og_headers = (
-    Meta(property="og:image", content="https://blog.mariusvach.com/images/og.png"),
-)
+# og_headers = (
+#     Meta(property="og:image", content="https://blog.mariusvach.com/images/og.png"),
+# )
 
 app, rt = fast_app(
     pico=False,
@@ -34,8 +34,11 @@ app, rt = fast_app(
         frankenui,
         tailwind,
         plausible,
-        Meta(name='google-site-verification', content='AHzT8BdRGuJ20gfBTqIHtWBGoleIfJ0e9gfjWwA_7HA'),
-        *og_headers,
+        Meta(
+            name="google-site-verification",
+            content="AHzT8BdRGuJ20gfBTqIHtWBGoleIfJ0e9gfjWwA_7HA",
+        ),
+        # *og_headers,
         MarkdownJS(),
         HighlightJS(langs=["python", "bash", "yaml", "json"], light="atom-one-dark"),
     ),
@@ -165,6 +168,12 @@ def get(slug: str):
         ),
         Meta(
             name="twitter:image",
+            content=f"https://blog.mariusvach.com/images/{frontmatter['image']}"
+            if "image" in frontmatter
+            else "https://blog.mariusvach.com/images/og.png",
+        ),
+        Meta(
+            name="og:image",
             content=f"https://blog.mariusvach.com/images/{frontmatter['image']}"
             if "image" in frontmatter
             else "https://blog.mariusvach.com/images/og.png",
