@@ -3,6 +3,7 @@ title: "Systematically improving AI Apps through Error Analysis: My Experience"
 date: 2025-04-22T15:27:52+01:00
 draft: false
 excerpt: How to systematically improve your LLM apps through analyzing its errors...
+image: improve_llms.jpg
 ---
 ![Systematically improving AI Apps through Error Analysis: My Experience](/images/improve_llms.jpg)
 
