@@ -16,7 +16,7 @@ plausible = Script(
 frankenui = (
     Link(
         rel="stylesheet",
-        href="https://unpkg.com/franken-wc@0.1.0/dist/css/zinc.min.css",
+        href="https://unpkg.com/franken-ui@1.1.0/dist/css/core.min.css",
     ),
     Script(src="https://cdn.jsdelivr.net/npm/uikit@3.21.6/dist/js/uikit.min.js"),
     Script(src="https://cdn.jsdelivr.net/npm/uikit@3.21.6/dist/js/uikit-icons.min.js"),
@@ -30,6 +30,7 @@ tailwind = Link(rel="stylesheet", href="/app.css", type="text/css")
 app, rt = fast_app(
     pico=False,
     static_path="public",
+    bodykw={"class": "uk-theme-zinc"},
     hdrs=(
         frankenui,
         tailwind,
@@ -129,12 +130,12 @@ def get():
                 href="https://twitter.com/rasmus1610",
                 cls="uk-button uk-button-primary uk-margin-small-top uk-margin-small-right",
             ),
-            A(
-                Lucide("smile", cls="w-4 h-4 mr-2 text-white"),
-                "Bluesky",
-                href="https://bsky.app/profile/rasmus1610.bsky.social",
-                cls="uk-button uk-button-primary uk-margin-small-top",
-            ),
+            # A(
+            #     Lucide("smile", cls="w-4 h-4 mr-2 text-white"),
+            #     "Bluesky",
+            #     href="https://bsky.app/profile/rasmus1610.bsky.social",
+            #     cls="uk-button uk-button-primary uk-margin-small-top",
+            # ),
         ),
         H2(
             "Here are some things I wrote:",
