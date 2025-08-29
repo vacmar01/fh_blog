@@ -108,7 +108,7 @@ def get():
             cls="text-4xl font-bold font-heading tracking-tight uk-margin-small-bottom",
         ),
         P(
-            "I'm a radiologist and software developer. I love building software and learning new things.",
+            "I'm a Machine Learning Engineer, Medical AI researcher and radiologist. I love building software and learning new things.",
             cls="text-lg uk-text-muted",
         ),
         Div(
