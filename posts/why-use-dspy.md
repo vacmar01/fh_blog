@@ -63,8 +63,6 @@ Modules wrap your Signature and determine how the LLM should try and satisfy the
 This may be a little bit abstract, so let's go with an example. 
 
 ```python
-llm = dspy.LM("gemini/gemini-2.5-flash-lite")
-
 qa = dspy.Predict(sig1)
 
 qa(question="What is the capital of france?")
