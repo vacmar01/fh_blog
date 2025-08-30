@@ -3,10 +3,10 @@ title: "Why DSPy is worth using (beyond prompt optimization)"
 date: 2025-08-30T15:27:52+01:00
 draft: false
 excerpt: Let's look at what DSPy offers for AI engineers besides prompt optimization...
-image: why_dspy.png
+image: why_dspy.jpg
 ---
 
-![Why use DSPy](/images/why_dspy.png)
+![Why use DSPy](/images/why_dspy.jpg)
 
 So if you work with LLMs and logged into X sometime in the last couple of months, I'm sure you've heard about DSPy.
 
@@ -106,7 +106,6 @@ But what if we have a harder math problem for the LLM and want to give it some t
 
 ```python
 mult_cot = dspy.ChainOfThought(mult_sig)
-mult_cot.set_lm(llm)
 
 mult_cot(number_a = 5, number_b = 13)
 ```
@@ -154,7 +153,7 @@ Prediction(
 )
 ```
 
-Boom, you just created an AI agent that can calculate the sum of two numbers (did I hear "overengineering"?).
+Boom, you just created an AI agent that can calculate the sum of two numbers (did I hear "overengineered"?).
 
 As you can see, through "Modules" and "Signatures" DSPy seperates the task definition or specification (Signature) from the Inference strategy to achieve this Task (Module). 
 
