@@ -142,6 +142,7 @@ def get():
         Div(
             *[BlogCard(post) for post in posts],
             cls="md:grid md:grid-cols-3 md:gap-4 uk-margin-top space-y-4 md:space-y-0",
+            hx_boost="true",
         ),
         cls="uk-container uk-container-xl py-16",
     )
