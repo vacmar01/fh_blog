@@ -199,33 +199,4 @@ def get(slug: str):
     )
 
 
-@rt("/feed.xml")
-def get():
-    posts = get_posts()
-    feed_items = []
-    for post in posts:
-        item = f"""
-        <item>
-            <title>{post["title"]}</title>
-            <link>https://blog.mariusvach.com/posts/{post["slug"]}</link>
-            <description>{post["excerpt"] if "excerpt" in post else ""}</description>
-            <pubDate>{post["date"].strftime("%a, %d %b %Y %H:%M:%S %z")}</pubDate>
-            <guid>https://blog.mariusvach.com/posts/{post["slug"]}</guid>
-        </item>
-        """
-        feed_items.append(item)
-
-    feed = f"""<?xml version="1.0" encoding="UTF-8" ?>
-    <rss version="2.0">
-    <channel>
-        <title>Marius Vach Blog</title>
-        <link>https://blog.mariusvach.com/</link>
-        <description>Blog by Marius Vach</description>
-        {"".join(feed_items)}
-    </channel>
-    </rss>
-    """
-    return Response(feed, media_type="application/rss+xml")
-
-
 serve()

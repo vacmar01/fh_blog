@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+    <title>Marius Vach Blog</title>
+    <link>https://blog.mariusvach.com/</link>
+    <description>Blog by Marius Vach</description>
+    
+    <item>
+        <title>The Not-so Bitter Lesson</title>
+        <link>https://blog.mariusvach.com/posts/bitter-lesson</link>
+        <description>How tinygrad helped me finally understand what Sutton meant</description>
+        <pubDate>Mon, 20 Oct 2025 15:27:52 +0100</pubDate>
+        <guid>https://blog.mariusvach.com/posts/bitter-lesson</guid>
+    </item>
+    
+    <item>
+        <title>Why DSPy is worth using (beyond prompt optimization)</title>
+        <link>https://blog.mariusvach.com/posts/why-use-dspy</link>
+        <description>Let&#x27;s look at what DSPy offers for AI engineers besides prompt optimization...</description>
+        <pubDate>Sat, 30 Aug 2025 15:27:52 +0100</pubDate>
+        <guid>https://blog.mariusvach.com/posts/why-use-dspy</guid>
+    </item>
+    
+    <item>
+        <title>DSPy SIMBA explained</title>
+        <link>https://blog.mariusvach.com/posts/dspy-simba</link>
+        <description>Let&#x27;s look at how self-reflective prompt optimization works...</description>
+        <pubDate>Tue, 05 Aug 2025 15:27:52 +0100</pubDate>
+        <guid>https://blog.mariusvach.com/posts/dspy-simba</guid>
+    </item>
+    
+    <item>
+        <title>Few-shot DSPy optimizers explained</title>
+        <link>https://blog.mariusvach.com/posts/dspy-optimizers</link>
+        <description>Let&#x27;s look at how some of the basic DSPy optimizers work...</description>
+        <pubDate>Sat, 26 Jul 2025 15:27:52 +0100</pubDate>
+        <guid>https://blog.mariusvach.com/posts/dspy-optimizers</guid>
+    </item>
+    
+    <item>
+        <title>Systematically improving AI Apps through Error Analysis: My Experience</title>
+        <link>https://blog.mariusvach.com/posts/systemically-improving-llm-apps</link>
+        <description>How to systematically improve your LLM apps through analyzing its errors...</description>
+        <pubDate>Tue, 22 Apr 2025 15:27:52 +0100</pubDate>
+        <guid>https://blog.mariusvach.com/posts/systemically-improving-llm-apps</guid>
+    </item>
+    
+    <item>
+        <title>The Best of Both Worlds: Combining Query Rewriting with Keyword-Based Search</title>
+        <link>https://blog.mariusvach.com/posts/query-rewriting-bm25</link>
+        <description>How to make BM25-based search more robust...</description>
+        <pubDate>Thu, 13 Mar 2025 15:27:52 +0100</pubDate>
+        <guid>https://blog.mariusvach.com/posts/query-rewriting-bm25</guid>
+    </item>
+    
+    <item>
+        <title>How to Add CSRF Protection to your FastHTML App</title>
+        <link>https://blog.mariusvach.com/posts/fasthtml-csrf-protection</link>
+        <description>Let&#x27;s look at how to secure your FastHTML routes against CSRF attacks.</description>
+        <pubDate>Sat, 22 Feb 2025 11:20:06 +0100</pubDate>
+        <guid>https://blog.mariusvach.com/posts/fasthtml-csrf-protection</guid>
+    </item>
+    
+    <item>
+        <title>How to Deal with Long-running Tasks in FastHTML</title>
+        <link>https://blog.mariusvach.com/posts/fasthtml-long-running-tasks</link>
+        <description>Let&#x27;s look at how to implement a simple task system in FastHTML</description>
+        <pubDate>Wed, 12 Feb 2025 11:20:06 +0100</pubDate>
+        <guid>https://blog.mariusvach.com/posts/fasthtml-long-running-tasks</guid>
+    </item>
+    
+    <item>
+        <title>I love you, R1</title>
+        <link>https://blog.mariusvach.com/posts/i-love-r1</link>
+        <description>Why I think reasoning models are a huge step forward...</description>
+        <pubDate>Fri, 31 Jan 2025 11:20:06 +0100</pubDate>
+        <guid>https://blog.mariusvach.com/posts/i-love-r1</guid>
+    </item>
+    
+    <item>
+        <title>How to Use Modal to run ColBERTv2</title>
+        <link>https://blog.mariusvach.com/posts/ragatouille-modal</link>
+        <description>How to use Modal.com to run ColBERTv2 through the ragatouille library</description>
+        <pubDate>Tue, 31 Dec 2024 11:20:06 +0100</pubDate>
+        <guid>https://blog.mariusvach.com/posts/ragatouille-modal</guid>
+    </item>
+    
+    <item>
+        <title>How to Define Layouts with Decorators in FastHTML</title>
+        <link>https://blog.mariusvach.com/posts/decorator-layouts</link>
+        <description>How to use decorators to elegantly define layouts in FastHTML</description>
+        <pubDate>Sat, 07 Dec 2024 15:27:52 +0100</pubDate>
+        <guid>https://blog.mariusvach.com/posts/decorator-layouts</guid>
+    </item>
+    
+    <item>
+        <title>How to Implement Social Login using OAuth and FastHTML</title>
+        <link>https://blog.mariusvach.com/posts/oauth-fasthtml</link>
+        <description>Let&#x27;s implement social logins in FastHTML</description>
+        <pubDate>Wed, 25 Sep 2024 11:20:06 +0100</pubDate>
+        <guid>https://blog.mariusvach.com/posts/oauth-fasthtml</guid>
+    </item>
+    
+    <item>
+        <title>How to Implement Passwordless Authentication in FastHTML</title>
+        <link>https://blog.mariusvach.com/posts/passwordless-auth-fasthtml</link>
+        <description>Let&#x27;s implement a passwordless authentication system using magic links.</description>
+        <pubDate>Sat, 07 Sep 2024 15:27:52 +0100</pubDate>
+        <guid>https://blog.mariusvach.com/posts/passwordless-auth-fasthtml</guid>
+    </item>
+    
+    <item>
+        <title>How to Build a Simple Login System in FastHTML</title>
+        <link>https://blog.mariusvach.com/posts/login-fasthtml</link>
+        <description>Authentication doesn&#x27;t have to be scary or complicated. Let&#x27;s implement a classic login and authentication system using the user&#x27;s email and password in FastHTML.</description>
+        <pubDate>Sun, 01 Sep 2024 11:20:06 +0100</pubDate>
+        <guid>https://blog.mariusvach.com/posts/login-fasthtml</guid>
+    </item>
+    
+    <item>
+        <title>How To Stand Out In A Crowded Market</title>
+        <link>https://blog.mariusvach.com/posts/crowded-markets</link>
+        <description></description>
+        <pubDate>Sun, 10 Mar 2024 17:31:06 +0100</pubDate>
+        <guid>https://blog.mariusvach.com/posts/crowded-markets</guid>
+    </item>
+    
+    <item>
+        <title>Sentiment Analysis with GPT 3.5</title>
+        <link>https://blog.mariusvach.com/posts/gpt3-5-sentiment-analysis</link>
+        <description></description>
+        <pubDate>Tue, 06 Feb 2024 20:05:14 +0100</pubDate>
+        <guid>https://blog.mariusvach.com/posts/gpt3-5-sentiment-analysis</guid>
+    </item>
+    
+    <item>
+        <title>Kaggle RSNA Challenge 2022 Postmortem</title>
+        <link>https://blog.mariusvach.com/posts/kaggle-rsna-2022-postmortem</link>
+        <description></description>
+        <pubDate>Sun, 13 Nov 2022 15:27:52 +0100</pubDate>
+        <guid>https://blog.mariusvach.com/posts/kaggle-rsna-2022-postmortem</guid>
+    </item>
+    
+    <item>
+        <title>How AI Can Really Help Radiologists</title>
+        <link>https://blog.mariusvach.com/posts/how-ai-can-help-radiologists</link>
+        <description></description>
+        <pubDate>Sun, 06 Nov 2022 18:53:57 +0200</pubDate>
+        <guid>https://blog.mariusvach.com/posts/how-ai-can-help-radiologists</guid>
+    </item>
+    
+    <item>
+        <title>Gentle Medicine &amp; Radiology</title>
+        <link>https://blog.mariusvach.com/posts/gentle-medicine-radiology</link>
+        <description></description>
+        <pubDate>Tue, 05 Jan 2021 20:47:41 +0100</pubDate>
+        <guid>https://blog.mariusvach.com/posts/gentle-medicine-radiology</guid>
+    </item>
+    
+    <item>
+        <title>The Case for Checklists in Radiology</title>
+        <link>https://blog.mariusvach.com/posts/checklists-radiology</link>
+        <description></description>
+        <pubDate>Fri, 25 Dec 2020 18:22:09 +0100</pubDate>
+        <guid>https://blog.mariusvach.com/posts/checklists-radiology</guid>
+    </item>
+    
+    <item>
+        <title>Diagnostic Tests &amp; Probabilities</title>
+        <link>https://blog.mariusvach.com/posts/bayesian-reasoning-radiology</link>
+        <description></description>
+        <pubDate>Fri, 11 Dec 2020 13:04:06 +0100</pubDate>
+        <guid>https://blog.mariusvach.com/posts/bayesian-reasoning-radiology</guid>
+    </item>
+    
+</channel>
+</rss>
