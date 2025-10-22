@@ -3,3 +3,4 @@ lucide-fasthtml
 python-dotenv
 python-fasthtml
 requests
+frontmatter
