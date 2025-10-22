@@ -1,8 +1,9 @@
-+++
-title = "How To Stand Out In A Crowded Market"
-date = "2024-03-10T17:31:06+01:00"
-slug = "crowded-markets"
-+++
+---
+title: "How To Stand Out In A Crowded Market"
+date: "2024-03-10T17:31:06+01:00"
+slug: "crowded-markets"
+draft: false
+---
 
 So you have your next big business idea. 
 

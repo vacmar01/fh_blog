@@ -1,4 +1,5 @@
 from fasthtml.common import *
+import frontmatter
 
 from lucide_fasthtml import Lucide
 
@@ -46,36 +47,39 @@ app, rt = fast_app(
 )
 
 
-@rt("/")
-def get():
+def get_posts(posts_dir="posts"):
     posts = []
-    posts_dir = "posts"
 
     for filename in os.listdir(posts_dir):
         if filename.endswith(".md"):
             with open(os.path.join(posts_dir, filename), "r") as file:
-                content = file.read()
-                parts = content.split("---")
-                if len(parts) > 2:
-                    post = yaml.safe_load(parts[1])
-                    post["slug"] = os.path.splitext(filename)[0]
-                    post["content"] = parts[2].strip()
-                    lines = post["content"].split("\n")
-                    if "excerpt" not in post:
-                        for line in lines:
-                            if line.strip() and not line.strip().startswith("!["):
-                                post["excerpt"] = line.strip()
-                                break
+                post = frontmatter.load(file)
+                post["slug"] = os.path.splitext(filename)[0]
+                post["content"] = post.content
 
-                    # Convert date string to datetime object if it exists
-                    if "date" in post and isinstance(post["date"], str):
-                        post["date"] = datetime.strptime(post["date"], "%Y-%m-%d")
+                # Convert date string to datetime object if it exists
+                if "date" in post and isinstance(post["date"], str):
+                    try:
+                        # Try ISO 8601 format first (with time and timezone)
+                        post["date"] = datetime.fromisoformat(post["date"])
+                    except ValueError:
+                        try:
+                            # Fall back to simple date format
+                            post["date"] = datetime.strptime(post["date"], "%Y-%m-%d")
+                        except ValueError:
+                            post["date"] = None
 
-                    if not post["draft"]:
-                        posts.append(post)
+                if not post.get("draft", False):
+                    posts.append(post)
 
     # Sort posts by date, most recent first
     posts.sort(key=lambda x: x.get("date", datetime.min), reverse=True)
+    return posts
+
+
+@rt("/")
+def get():
+    posts = get_posts()
 
     def BlogCard(post, *args, **kwargs):
         return Div(
@@ -130,12 +134,6 @@ def get():
                 href="https://twitter.com/rasmus1610",
                 cls="uk-button uk-button-primary uk-margin-small-top uk-margin-small-right",
             ),
-            # A(
-            #     Lucide("smile", cls="w-4 h-4 mr-2 text-white"),
-            #     "Bluesky",
-            #     href="https://bsky.app/profile/rasmus1610.bsky.social",
-            #     cls="uk-button uk-button-primary uk-margin-small-top",
-            # ),
         ),
         H2(
             "Here are some things I wrote:",
@@ -152,38 +150,32 @@ def get():
 @rt("/posts/{slug}")
 def get(slug: str):
     with open(f"posts/{slug}.md", "r") as file:
-        content = file.read()
-
-    post_content = content.split("---")[2]
-
-    frontmatter = yaml.safe_load(content.split("---")[1])
+        post = frontmatter.load(file)
 
     twitter_headers = (
         Meta(name="twitter:card", content="summary"),
-        Meta(name="twitter:title", content=frontmatter["title"]),
+        Meta(name="twitter:title", content=post["title"]),
         Meta(
             name="twitter:description",
-            content=frontmatter["excerpt"]
-            if "excerpt" in frontmatter
-            else "Blog by Marius Vach",
+            content=post["excerpt"] if "excerpt" in post else "Blog by Marius Vach",
         ),
         Meta(
             name="twitter:image",
-            content=f"https://blog.mariusvach.com/images/{frontmatter['image']}"
-            if "image" in frontmatter
+            content=f"https://blog.mariusvach.com/images/{post['image']}"
+            if "image" in post
             else "https://blog.mariusvach.com/images/og.png",
         ),
         Meta(
             name="og:image",
-            content=f"https://blog.mariusvach.com/images/{frontmatter['image']}"
-            if "image" in frontmatter
+            content=f"https://blog.mariusvach.com/images/{post['image']}"
+            if "image" in post
             else "https://blog.mariusvach.com/images/og.png",
         ),
     )
 
     return (
         *twitter_headers,
-        Title(f"{frontmatter['title']} - Marius Vach Blog"),
+        Title(f"{post['title']} - Marius Vach Blog"),
         Div(
             A(
                 Lucide("arrow-left", cls="w-4 h-4 text-black mr-2"),
@@ -192,15 +184,15 @@ def get(slug: str):
                 cls="absolute md:top-0 left-0 top-2 md:-ml-48 md:mt-16 uk-button uk-button-ghost",
             ),
             H1(
-                frontmatter["title"],
+                post["title"],
                 cls="text-4xl font-bold font-heading tracking-tight uk-margin-small-bottom",
             ),
             P(
-                frontmatter["date"].strftime("%B %d, %Y"),
+                post["date"].strftime("%B %d, %Y"),
                 " by Marius Vach",
                 cls="uk-text-muted uk-text-small uk-text-italic",
             ),
-            Div(post_content, cls="marked prose mx-auto uk-margin-top"),
+            Div(post, cls="marked prose mx-auto uk-margin-top"),
             cls="uk-container max-w-[65ch] mx-auto relative py-16",
         ),
     )

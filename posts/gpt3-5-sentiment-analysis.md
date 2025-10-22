@@ -1,8 +1,8 @@
-+++
-title = 'Sentiment Analysis with GPT 3.5'
-date = 2024-02-06T20:05:14+01:00
-draft = false
-+++
+---
+title: 'Sentiment Analysis with GPT 3.5'
+date: 2024-02-06T20:05:14+01:00
+draft: false
+---
 
 Did you know that you can classify text into distinct, predefined classes with LLMs like ChatGPT?
 
