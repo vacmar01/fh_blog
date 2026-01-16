@@ -3,7 +3,7 @@ title: I love you, R1
 date: 2025-01-31T11:20:06+01:00
 draft: false
 excerpt: Why I think reasoning models are a huge step forward...
-image: r1.png
+image: r1.webp
 ---
 
 When using AI to help me with tedious research tasks, I have to trust it and be able to verify its output, because in the end, it's my name on the paper and my reputation on the line. 
@@ -42,7 +42,7 @@ That's where it got fun.
 In the train of thought after that prompt the LLM first defined the problem categories for itself again and then it went through every note and categorized it with commentary if it wasn't sure about what class to put the note in with a reason why it chose what category in the end. 
 After that it counted what category appeared how often (admittedly it had to recount several times but it realized on its own when it messed up) and calculated the proportions of each category. You can read through all of the thought process [here](https://gist.github.com/vacmar01/14b5f96d7eb80085455980e75332fc0a).
 
-![R1 output](/images/r1.png)
+![R1 output](/images/r1.webp)
 
 The final answer was a table with the problem category, the count and percentage for each category as well as 2-3 key examples for every category. That was really helpful and valuable stuff. 
 

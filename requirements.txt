@@ -1,5 +1,6 @@
 beautifulsoup4
 lucide-fasthtml
+pillow
 python-dotenv
 python-fasthtml
 requests

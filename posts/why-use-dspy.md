@@ -3,10 +3,10 @@ title: "Why DSPy is worth using (beyond prompt optimization)"
 date: 2025-08-30T15:27:52+01:00
 draft: false
 excerpt: Let's look at what DSPy offers for AI engineers besides prompt optimization...
-image: why_dspy.jpg
+image: why_dspy.webp
 ---
 
-![Why use DSPy](/images/why_dspy.jpg)
+![Why use DSPy](/images/why_dspy.webp)
 
 So if you work with LLMs and logged into X sometime in the last couple of months, I'm sure you've heard about DSPy.
 

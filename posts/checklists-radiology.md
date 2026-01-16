@@ -4,7 +4,7 @@ date: 2020-12-25T18:22:09+01:00
 draft: false
 ---
 
-![Bruno et al. 2015](/images/bruno_et_al.png)
+![Bruno et al. 2015](/images/bruno_et_al.webp)
 
 According to [Bruno et al. (2015)](https://pubs.rsna.org/doi/pdf/10.1148/rg.2015150023), the most common error in radiology is "underreading", i.e. simply overlooking findings. If you add up all the types of errors that result from overlooking a finding, these account for almost 90% of errors in radiology. Yet it is mostly the increase of knowledge and not the finding of findings that is talked about in the training of radiology residents.
 

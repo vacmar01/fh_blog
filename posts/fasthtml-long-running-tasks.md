@@ -3,7 +3,7 @@ title: How to Deal with Long-running Tasks in FastHTML
 date: 2025-02-12T11:20:06+01:00
 draft: false
 excerpt: Let's look at how to implement a simple task system in FastHTML
-image: long_running.png
+image: long_running.webp
 ---
 A very common pattern in web apps in calling an LLM through an API. 
 
@@ -138,7 +138,7 @@ The endpoint retrieves the task through it's `task_id` from our `tasks` dict. Ev
 
 If it hasn't finished, we'll return the same `Div` as before so that our web app keeps on polling the `check` endpoint until the task is finished. 
 
-![How to deal with long-running tasks in FastHTML](/images/long_running.png)
+![How to deal with long-running tasks in FastHTML](/images/long_running.webp)
 
 So as you can see, it's not that difficult to deal with long running tasks in FastHTML/ASGI. The beauty is that ASGI is async by default, which makes dealing with this kind of stuff very easy. With WSGI apps like Flask or Django, this because a little bit more awkward. 
 

@@ -3,7 +3,7 @@ title: "DSPy SIMBA explained"
 date: 2025-08-05T15:27:52+01:00
 draft: false
 excerpt: Let's look at how self-reflective prompt optimization works...
-image: simba.png
+image: simba.webp
 ---
 Alright, so if you've been [following me on Twitter](https://twitter.com/rasmus1610), you know I'm pretty obsessed with the [DSPy library](https://dspy.ai). And while I particularly love it because of the programming model and abstractions, most people still think "prompt optimizer" when they hear DSPy.
 
@@ -21,7 +21,7 @@ What makes SIMBA interesting is that it's introspective - it literally uses the 
 
 So let's dive in and see how this thing actually works.
 
-![Stochastic Introspective Mini-Batch Ascent](/images/simba.png)
+![Stochastic Introspective Mini-Batch Ascent](/images/simba.webp)
 
 Let’s go through the algorithm step by step:
 

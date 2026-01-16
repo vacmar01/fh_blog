@@ -3,11 +3,11 @@ title: "Few-shot DSPy optimizers explained"
 date: 2025-07-26T15:27:52+01:00
 draft: false
 excerpt: Let's look at how some of the basic DSPy optimizers work...
-image: dspy-optimizers.png
+image: dspy-optimizers.webp
 ---
 
 
-![Few-shot DSPy optimizers explained](/images/dspy-optimizers.png)
+![Few-shot DSPy optimizers explained](/images/dspy-optimizers.webp)
 
 [DSPy](https://dspy.ai) is an awesome library for building [compound AI systems](https://bair.berkeley.edu/blog/2024/02/18/compound-ai-systems/) in Python. But it also comes with a lot of jargon and special terminology that makes diving into the library quite confusing for newcomers.
 

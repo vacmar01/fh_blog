@@ -3,9 +3,9 @@ title: "Systematically improving AI Apps through Error Analysis: My Experience"
 date: 2025-04-22T15:27:52+01:00
 draft: false
 excerpt: How to systematically improve your LLM apps through analyzing its errors...
-image: improve_llms.jpg
+image: improve_llms.webp
 ---
-![Systematically improving AI Apps through Error Analysis: My Experience](/images/improve_llms.jpg)
+![Systematically improving AI Apps through Error Analysis: My Experience](/images/improve_llms.webp)
 
 ## Introduction
 
@@ -23,8 +23,8 @@ Also the works by [Hamel Husein](https://hamel.dev) and [Jason Liu](https://jxnl
 
 ### Wilhelm.ai
 
-![Wilhelm.ai](/images/wilhelm_ai.png)  
-In order to understand the post better, it’s beneficial if I show you how wilhelm.ai works and what it does. I refer to it for examples often. This is a schema of the app: ![Schema Wilhelm.ai](/images/wilhelm_schema.png) 
+![Wilhelm.ai](/images/wilhelm_ai.webp)  
+In order to understand the post better, it’s beneficial if I show you how wilhelm.ai works and what it does. I refer to it for examples often. This is a schema of the app: ![Schema Wilhelm.ai](/images/wilhelm_schema.webp) 
 Wilhelm.ai answers the user query, by using content from radiopaedia.org (Radiopaedia is a huge open radiology encyclopaedia). 
 
 What the system does is the following: 
@@ -42,7 +42,7 @@ But now let’s get into the actual process of error analysis.
 
 When I say “systematically improve” I mean implementing a cyclical process for evaluating and improving your LLM system that looks like this: 
 
-![The Process](/images/process.png)
+![The Process](/images/process.webp)
 
 1. We **evaluate** the errors of our system  
 2. We make a hypothesis on how to improve our outputs. We apply those **changes**.  
@@ -122,7 +122,7 @@ I built a very simple web app for my use case using FastHTML ([https://fastht.ml
 
 Below you see a screenshot of my data explorer app. It has 130 lines of code (including markup and imports). [Here is a gist](https://gist.github.com/vacmar01/db3164a15a184955a7a50486706ed58e) with the complete code.
 
-![The Data Explorer](/images/data_explorer.png)
+![The Data Explorer](/images/data_explorer.webp)
 
 Here is what you should display in this app: 
 
@@ -175,7 +175,7 @@ With DeepSeek R1 I had very good results with a prompt like this:
 
 After prompting it again, R1 generated this nicely looking table with an overview of the different problem categories, their relative occurrence and key examples. 
 
-![table with errors](/images/table.png)
+![table with errors](/images/table.webp)
 
 ## Change
 
@@ -215,7 +215,7 @@ This kind of worked. But was a little bit “wonky” and it added a lot to the 
 To lower the latency I tried out a “normal” reranker model by Jina.ai. 
 
 Then I started doing the first real iteration of the system above and I saw that the “best” search result picked by the reranker was crap. These are my notes from this iteration:   
-![Notes on iteration](/images/notes1.png)
+![Notes on iteration](/images/notes1.webp)
 
 You don’t have to be a genius to see that using a simple heuristic of just picking the first search result instead of having a complicated reranking step would perform much better. The newest version right now actually picks the first two search results, as a simple hack to mitigate problems where Radiopaedia search has the best search result on position \#2. Works like a charm. 
 
@@ -223,7 +223,7 @@ This highlights a key principle: components that theoretically *should* improve 
 
 An example of how iterating on my app through error analysis helped me improve my output, look at the following image. This was just 3 iterations. Something you can do in maybe 2 hours \- depending on the size of your test query set. Think about how much you can improve your product when really nailing down this process and doing 100s of iterations. 
 
-![Before After](/images/before_after.png)
+![Before After](/images/before_after.webp)
 
 ## Conclusion
 
