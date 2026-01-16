@@ -134,6 +134,12 @@ def get():
                 href="https://twitter.com/rasmus1610",
                 cls="uk-button uk-button-primary uk-margin-small-top uk-margin-small-right",
             ),
+            A(
+                Lucide("rss", cls="w-4 h-4 mr-2 text-white"),
+                "RSS",
+                href="/feed.xml",
+                cls="uk-button uk-button-primary uk-margin-small-top uk-margin-small-right",
+            ),
         ),
         H2(
             "Here are some things I wrote:",
