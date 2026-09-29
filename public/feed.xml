@@ -6,6 +6,14 @@
     <description>Blog by Marius Vach</description>
     
     <item>
+        <title>Thoughts on Jev</title>
+        <link>https://blog.mariusvach.com/posts/thoughts-on-jev</link>
+        <description>Jev is the AI moment of 2026 for me. But the interesting part isn&#x27;t its classifier interface — it&#x27;s the training objective, and what it means for building with AI.</description>
+        <pubDate>Tue, 29 Sep 2026 21:42:57 +0200</pubDate>
+        <guid>https://blog.mariusvach.com/posts/thoughts-on-jev</guid>
+    </item>
+    
+    <item>
         <title>We Don&#x27;t Build the Machines Anymore</title>
         <link>https://blog.mariusvach.com/posts/designing-not-building</link>
         <description>We design the machines. We don&#x27;t build them anymore. I&#x27;m still not sure how I feel about that.</description>
