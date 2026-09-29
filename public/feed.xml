@@ -6,6 +6,14 @@
     <description>Blog by Marius Vach</description>
     
     <item>
+        <title>We Don&#x27;t Build the Machines Anymore</title>
+        <link>https://blog.mariusvach.com/posts/designing-not-building</link>
+        <description>We design the machines. We don&#x27;t build them anymore. I&#x27;m still not sure how I feel about that.</description>
+        <pubDate>Fri, 16 Jan 2026 12:00:00 +0100</pubDate>
+        <guid>https://blog.mariusvach.com/posts/designing-not-building</guid>
+    </item>
+    
+    <item>
         <title>The Not-so Bitter Lesson</title>
         <link>https://blog.mariusvach.com/posts/bitter-lesson</link>
         <description>How tinygrad helped me finally understand what Sutton meant</description>
